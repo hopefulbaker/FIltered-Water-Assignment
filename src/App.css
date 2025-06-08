@@ -1,42 +1,54 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #1e1e1e;
+}
+
+.click {
+  color: #93e9ff;
+  font-size: 25px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  height: 200px;
+  width: 200px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+button > img {
+  display: flex;
+  justify-content: center;
 }
 
-.card {
-  padding: 2em;
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 50px;
+  color: #93e9ff;
 }
 
-.read-the-docs {
-  color: #888;
+.result > img {
+  margin-top: 20px;
+  height: 200px;
+  width: 200px;
+  margin-left: 42.75vw;
+}
+
+.bucket {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
