@@ -9,19 +9,19 @@ import jug from "./assets/water_jug.png";
 function App() {
   let [waterImage, setWaterImage] = useState<boolean>(false);
 
-  const handleOnClick = () => {
-    let filteredWater: string[] = FilteredWater(water, contaminates);
-    setWater(filteredWater);
-
-    setWaterImage(true);
-  };
-
   const [water, setWater] = useState<string[]>([
     "chlorine",
     "salt",
     "dirt",
     "calcite",
   ]);
+
+  const handleOnClick = () => {
+    let filteredWater: string[] = FilteredWater(water, contaminates);
+    setWater(filteredWater);
+
+    setWaterImage(true);
+  };
 
   let contaminates: string[] = ["dirt", "uranium", "germs"];
 
@@ -41,7 +41,7 @@ function App() {
           {waterImage && (
             <img className="bucket" src={jug} alt="Water Bucket" />
           )}
-          <WaterBucket water={water} />
+          <WaterBucket water={water.map((item) => item + " ").join("")} />
         </div>
       </>
     </div>
