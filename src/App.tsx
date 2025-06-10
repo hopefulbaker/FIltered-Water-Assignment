@@ -3,6 +3,8 @@ import "./App.css";
 import Header from "./Header";
 import FilteredWater from "./Filter";
 import WaterBucket from "./Water";
+import filter from "./assets/water_filter.png";
+import jug from "./assets/water_jug.png";
 
 function App() {
   let [waterImage, setWaterImage] = useState<boolean>(false);
@@ -31,13 +33,13 @@ function App() {
       </p>
       <div className="button">
         <button onClick={handleOnClick}>
-          <img src="water_filter.png" alt="machine" />
+          <img src={filter} alt="machine" />
         </button>
       </div>
       <>
         <div className="result">
           {waterImage && (
-            <img className="bucket" src="water_jug.png" alt="Water Bucket" />
+            <img className="bucket" src={jug} alt="Water Bucket" />
           )}
           <WaterBucket water={water} />
         </div>

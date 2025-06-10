@@ -1,12 +1,16 @@
-import Button from "./Button";
-import AnimatedContent from "./AnimatedContent";
+import AnimatedContent from "./AnimatedContent.tsx";
+import Filter from "./Filter.tsx";
+import { useState } from "react";
 
 function Water() {
-  const handleClick = () => { };
+  const [showAnimation, setShowAnimation] = useState(false);
+  const handleClick = () => {
+    setShowAnimation(!showAnimation);
+  };
 
   return (
     <div>
-      <Button title="Filter!" handleClick={handleClick}
+      <button title="Filter!" handleClick={handleClick}></button>
       <AnimatedContent
         distance={150}
         direction="vertical"
@@ -26,4 +30,3 @@ function Water() {
 }
 
 export default Water;
-
