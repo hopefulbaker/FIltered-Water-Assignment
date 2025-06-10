@@ -19,7 +19,6 @@ function App() {
   const handleOnClick = () => {
     let filteredWater: string[] = FilteredWater(water, contaminates);
     setWater(filteredWater);
-
     setWaterImage(true);
   };
 
@@ -36,14 +35,10 @@ function App() {
           <img src={filter} alt="machine" />
         </button>
       </div>
-      <>
-        <div className="result">
-          {waterImage && (
-            <img className="bucket" src={jug} alt="Water Bucket" />
-          )}
-          <WaterBucket water={water.map((item) => item + " ").join("")} />
-        </div>
-      </>
+      <div className="result">
+        {waterImage && <img className="bucket" src={jug} alt="Water Bucket" />}
+        <WaterBucket water={water} />
+      </div>
     </div>
   );
 }

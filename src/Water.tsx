@@ -15,10 +15,15 @@ const Water: React.FC<Props> = ({ water }) => {
   return (
     <div>
       <AnimatedContent distance={150} direction="vertical" reverse={true}>
-        <div className="water">{water}</div>
+        <div className="water">
+          {water.map((item, index) => (
+            <span key={index} style={{ marginRight: "8px" }}>
+              {item}
+            </span>
+          ))}
+        </div>
       </AnimatedContent>
     </div>
   );
 };
-
 export default Water;
